@@ -3,6 +3,7 @@ import Description from "./components/Description.jsx";
 import Feedback from "./components/Feedback.jsx";
 import Options from "./components/Options.jsx";
 import "./App.css";
+import Notification from "./components/Notification.jsx";
 
 export default function App() {
   const [feedback, setFeedback] = useState(() => {
@@ -48,7 +49,7 @@ export default function App() {
           positive={totalPositive}
         />
       ) : (
-        <p>No feedback yet</p>
+        <Notification text="No feedback yet" />
       )}
     </>
   );
